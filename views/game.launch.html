@@ -185,12 +185,22 @@ var words = {
 		var li = $('<li />');
 		li.addClass(this.exists == true ? 'wordlist-words' : 'wordlist-mistake');
 		li.html(this.word);
-		li.appendTo('ul#wordlist');
+		if($('ul#wordlist li').length == 0){
+			$('ul#wordlist').append(li);
+		}
+		else{
+			$('ul#wordlist li:first').before(li);
+		}
 		this.sendFoundWord();
 
 		var li = $('<li class="pointlist-points" />');
 		li.html(this.exists === true ? grid.wordPoints : '&nbsp;');
-		li.appendTo('ul#pointlist');
+		if($('ul#pointlist li').length == 0){
+			$('ul#pointlist').append(li);
+		}
+		else{
+			$('ul#pointlist li:first').before(li);
+		}
 	},
 
 	getNumberOfWords: function(){
