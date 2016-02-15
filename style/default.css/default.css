@@ -1200,3 +1200,17 @@ li.exodef-definition ul {
 	display:none;
 	color: red;
 }
+
+footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	color:white;
+	font-size:large;
+	background-color: #005497;
+	padding-left:1em;
+	padding-right:1em;
+	padding-top:0.3em;
+	padding-bottom:0.5em;
+}
